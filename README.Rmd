@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/ruckeran/eatGets/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ruckeran/eatGets/actions/workflows/R-CMD-check.yaml)
-[![Coverage Status](https://codecov.io/gh/ruckeran/eatGets/branch/main/graph/badge.svg)](https://codecov.io/gh/ruckeran/eatGets)
+[![Codecov test coverage](https://codecov.io/gh/ruckeran/eatGets/graph/badge.svg)](https://app.codecov.io/gh/ruckeran/eatGets)
 <!-- badges: end -->
 
 ## Overview
