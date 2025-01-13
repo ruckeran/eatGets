@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/ruckeran/eatGets/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ruckeran/eatGets/actions/workflows/R-CMD-check.yaml)
+[![codecov](https://codecov.io/gh/ruckeran/eatGets/graph/badge.svg?token=ZL8QG44B09)](https://codecov.io/gh/ruckeran/eatGets)
 <!-- badges: end -->
 
 ## Overview
