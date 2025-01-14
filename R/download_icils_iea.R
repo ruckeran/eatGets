@@ -1,16 +1,17 @@
-#' Download and import an empty FDZ file.
+#' Download and import an empty ICILS public use file.
 #'
-#' Download and import an empty ICILS data set from the \href{https://www.iqb.hu-berlin.de/fdz/studies/}{FDZ homepage}.
+#' Download and import an empty ICILS public use file (containing only the first data row) from the \href{https://www.iea.nl/data-tools/repository/icils}{IEA homepage}.
 #'
-#' The function downloads and imports an empty ICILS data set (\code{Leerdatensatz}) from the FDZ homepage.
-#' These data sets contain zero rows.
-#' The data is imported via \code{\link[eatGADS]{import_spss}} as a \code{GADSdat} object.
+#' The function downloads a zip file from the IEA homepage into a temporary directory,
+#' unzips it and imports the data with only a single data row via \code{\link[haven]{read_sav}}.
+#' For downloading full ICILS data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
+#' The data is imported as a \code{GADSdat} object.
 #'
 #'@param year Year of the assessment.
 #'@param data_type Type of the data.
 #'
 #'@examples
-#' iea_icils <- download_icils(year = "2018",
+#' iea_icils <- download_icils_iea(year = "2018",
 #'                         data_type = "stud_dat")
 #'@export
 download_icils_iea <- function(year = c("2018", "2013"),
