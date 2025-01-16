@@ -26,29 +26,80 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
   # URL table for each study, year and data type
   download_paths <- list(
     "2001" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_SC_Lee.sav",
-      teach_ger_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_DE_Lee.sav",
-      teach_math_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_MA_Lee.sav",
-      teach_gen_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_SU_Lee.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_SL_Lee.sav"
+      stud_par_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
+        dat_subdir = c("ASADEUR1.sav", "ASGDEUR1.sav", "ASHDEUr1.sav", "ASRDEUr1.sav", "ASTDEUR1.sav")
+      ),
+      teach_ger_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
+        dat_subdir = "ATGDEUr1.sav"
+      ),
+      teach_math_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
+        dat_subdir = "ATGDEUr1.sav"
+      ),
+      teach_gen_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
+        dat_subdir = "ATGDEUr1.sav"
+      ),
+      school_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
+        dat_subdir = "ACGDEUr1.sav"
+      )
     ),
     "2006" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_SC_EL_.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_DE_Lee.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_SL_Lee.sav",
-      testscores = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_TS_Lee.sav"
+      stud_par_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2006/PIRLS2006_IDB_SPSS.zip",
+        dat_subdir = c("asadeur2.sav", "asgdeur2.sav", "ashdeur2.sav")
+      ),
+      teach_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2006/PIRLS2006_IDB_SPSS.zip",
+        dat_subdir = c("atgdeur2.sav")
+      ),
+      school_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2006/PIRLS2006_IDB_SPSS.zip",
+        dat_subdir = c("acgdeur2.sav")
+      ),
+      testscores = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2006/PIRLS2006_IDB_SPSS.zip",
+        dat_subdir = c("astdeur2.sav", "asrdeur2.sav")
+      )
     ),
     "2011" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2011/IGLU2011_SEFB_le.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2011/IGLU2011_LSFB_le.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2011/IGLU2011_SLFB_le.sav"
+      stud_par_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2011/PIRLS2011_IDB_SPSS.zip",
+        dat_subdir = c("asadeur3.sav", "asgdeur3.sav", "ashdeur3.sav", "asrdeur3.sav", "astdeur3.sav")
+      ),
+      teach_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2011/PIRLS2011_IDB_SPSS.zip",
+        dat_subdir = c("atgdeur3.sav")
+      ),
+      school_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2011/PIRLS2011_IDB_SPSS.zip",
+        dat_subdir = c("acgdeur3.sav")
+      )
     ),
     "2016" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_SEFB_v1.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_LFB_v1_.sav",
-      teach_stud_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_LSFB_v1.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_SLFB_v1.sav",
-      tracking = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_TR_v1_L.sav"
+      stud_par_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = c("ASADEUR4.sav", "ASGDEUR4.sav", "ASHDEUR4.sav", "ASRDEUR4.sav", "ASTDEUR4.sav")
+      ),
+      teach_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = c("ATGDEUR4.sav")
+      ),
+      teach_stud_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = c("")
+      ),
+      school_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = c("ACGDEUR4.sav")
+      ),
+      tracking = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = c("")
+      )
     )
   )
 
