@@ -76,7 +76,7 @@ download_icils_iea <- function(year = c("2018", "2013"),
       data_type %in% names(download_paths[[year]])) {
 
     zip_path <- download_paths[[year]][[data_type]]$zip_path
-    data_subdir <- download_paths[[year]][[data_type]]$data_subdir
+    dat_subdir <- download_paths[[year]][[data_type]]$dat_subdir
   } else {
     stop("The corresponding download has not been implemented yet.")
   }
@@ -90,15 +90,19 @@ download_icils_iea <- function(year = c("2018", "2013"),
   on.exit(options(timeout = old_timeout))
 
   ## Download the zip file
-  zip_file <- file.path(temp_folder, "icils.zip")
+  zip_file <- file.path(temp_folder, "data.zip")
   utils::download.file(url = zip_path, destfile = zip_file)
+
+  ## Recursive search for the file in the archive
+  zip_contents <- utils::unzip(zipfile = zip_file, list = TRUE)
+  matching_files <- zip_contents$Name[grepl(basename(dat_subdir), zip_contents$Name, ignore.case = TRUE)]
 
   ## Unzip the required file from the archive
   unzip_folder <- file.path(temp_folder, "unzipped_data")
-  zip::unzip(zipfile = zip_file, files = data_subdir, exdir = unzip_folder)
+  utils::unzip(zipfile = zip_file, files = matching_files[1], exdir = unzip_folder)
 
   ## Construct the full path to the extracted data file
-  extracted_file_path <- file.path(unzip_folder, data_subdir)
+  extracted_file_path <- file.path(unzip_folder, matching_files[1])
 
   ## Import the data using haven and convert to GADSdat
   haven_dat <- haven::read_sav(extracted_file_path, n_max = 1, user_na = TRUE)
