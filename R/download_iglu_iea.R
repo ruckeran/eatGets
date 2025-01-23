@@ -86,20 +86,20 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
       ),
       teach_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-        dat_subdir = c("ATGDEUR4.sav")
+        dat_subdir = "ATGDEUR4.sav"
       ),
-      # teach_stud_dat = list(
-      #   zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-      #   dat_subdir = c("")
-      # ),
+      teach_stud_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = "ATGDEUR4.sav"
+      ),  # Datensatz anpassen!
       school_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-        dat_subdir = c("ACGDEUR4.sav")
+        dat_subdir = "ACGDEUR4.sav"
       ),
-      # tracking = list(
-      #   zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-      #   dat_subdir = c("")
-      )
+      tracking = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
+        dat_subdir = "ACGDEUR4.sav"
+      ) # Datensatz anpassen!
     )
   )
 
@@ -109,6 +109,8 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
 
     zip_path <- download_paths[[year]][[data_type]]$zip_path
     dat_subdir <- download_paths[[year]][[data_type]]$dat_subdir
+    print(paste("zip_path:", zip_path))
+    print(paste("dat_subdir:", dat_subdir))
   } else {
     stop("The corresponding download has not been implemented yet.")
   }
@@ -128,20 +130,24 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
   ## Recursive search for the file in the archive
   zip_contents <- utils::unzip(zipfile = zip_file, list = TRUE)
   if (!is.character(dat_subdir)) {
-    stop("dat_subdir must be a character vector..")
+    stop("dat_subdir must be a character vector.")
+  }
+  if (length(dat_subdir) == 0 || all(dat_subdir == "")) {
+    stop("dat_subdir is empty or contains only empty strings.")
   }
 
+  print(paste("dat_subdir is:", toString(dat_subdir)))
   matching_files <- sapply(dat_subdir, function(pattern) {
     found_file <- zip_contents$Name[grepl(pattern, zip_contents$Name, ignore.case = TRUE)]
     if (length(found_file) > 0) {
       return(found_file)
     } else {
-      warning(paste("Datei", pattern, "wurde im ZIP nicht gefunden."))
+      warning(paste("file", pattern, "was not found in the ZIP."))
       return(NA)
     }
   })
 
-  matching_files <- na.omit(matching_files) # Dateien, die nicht gefunden wurden, entfernen
+  matching_files <- na.omit(matching_files) # Remove files that were not found
 
 
   if (length(matching_files) == 0) {
