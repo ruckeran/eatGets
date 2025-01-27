@@ -26,39 +26,33 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
   data_type <- match.arg(data_type)
 
   # URL table for each study, year and data type
-  download_paths <- list(
-    "2000" = list(
-      stud_dat_9kl = c(list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_math.zip",
-        dat_subdir = "intstud_math_v3.txt"
-      ),
-      list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_read.zip",
-        dat_subdir = "intstud_read_v3.txt"
-      ),
-      list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_scie.zip",
-        dat_subdir = "intstud_scie_v3.txt"
-      )),
-      school_dat = list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip",
-        dat_subdir = "intscho.txt"
-      ),
-    )
+  download_paths <- list("2000" = list(
+    stud_dat_15j = c(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intcogn_v4.zip", dat_subdir = "intcogn_v4.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_math.zip", dat_subdir = "intstud_math_v3.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_read.zip", dat_subdir = "intstud_read_v3.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_scie.zip", dat_subdir = "intstud_scie_v3.txt")
+    ),
+    school_dat = list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "intscho.txt"),
+  ),
+  list("2003" = list(
+    stud_dat_9kl = c(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intcogn_v4.zip", dat_subdir = "intcogn_v4.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_math.zip", dat_subdir = "intstud_math_v3.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_read.zip", dat_subdir = "intstud_read_v3.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_scie.zip", dat_subdir = "intstud_scie_v3.txt")
+    ),
+    teach_dat_15j = list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "intscho.txt"),
+    school_dat_15j = list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "intscho.txt"),
+  ))
   )
 
+
     download_paths <- list(
-    "2000" = list(
-      stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2000/PISA2000_9kl_SC.sav",
-      stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2000/PISA2000_15J_SC.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2000/PISA2000_Schule.sav"
-    ),
+
     "2003" = list(
-      stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SC_9K.sav",
       stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SC_15.sav",
-      teach_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_LE_9K.sav",
       teach_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_LE_15.sav",
-      school_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SN_9K.sav",
       school_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SN_15.sav"
     ),
     "2006" = list(
