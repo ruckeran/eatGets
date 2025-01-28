@@ -26,67 +26,79 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
   data_type <- match.arg(data_type)
 
   # URL table for each study, year and data type
-  download_paths <- list("2000" = list(
-    stud_dat_15j = c(
+  download_paths <- list(
+    "2000" = list(
+    stud_dat_15j = list(
       list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intcogn_v4.zip", dat_subdir = "intcogn_v4.txt"),
       list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_math.zip", dat_subdir = "intstud_math_v3.txt"),
       list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_read.zip", dat_subdir = "intstud_read_v3.txt"),
       list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intstud_scie.zip", dat_subdir = "intstud_scie_v3.txt")
-    ),
-    school_dat = list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "intscho.txt"),
+      ),
+    school_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "intscho.txt")
+    )
   ),
-  list("2003" = list(
-    stud_dat_9kl = c(
+  "2003" = list(
+    stud_dat_9kl = list(
       list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2003-datasets/data-sets-in-txt-formats/INT_cogn_2003.zip", dat_subdir = "INT_cogn_2003_v2.txt"),
       list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2003-datasets/data-sets-in-txt-formats/INT_stui_2003_v2.zip", dat_subdir = "INT_stui_2003_v2.txt")
-    ),
-    # teach_dat_15j = list(zip_path = "?no_data_in_excel_table?", dat_subdir = "?"),
-    school_dat_15j = list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2003-datasets/data-sets-in-txt-formats/INT_schi_2003.zip", dat_subdir = "intscho.txt"),
-  ))
-  )
-
-
-    download_paths <- list(
-
-    "2003" = list(
-      stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SC_15.sav",
-      teach_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_LE_15.sav",
-      school_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SN_15.sav"
-    ),
-    "2006" = list(
-      stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_SC_9K.sav",
-      stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_SC_15.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_LE_Le.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_Schull.sav",
-      par_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_EL_9k.sav",
-      par_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_EL_15.sav"
-    ),
-    "2009" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2009/PISA09_Leer_SEFB.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2009/PISA09_Leer_LFB.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2009/PISA09_Leer_SLFB.sav"
-    ),
-    "2012" = list(
-      stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Schuele.sav",
-      stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Schuele_1.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_LehrerI.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Schulle.sav",
-      par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Eltern_.sav",
-      matching = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Matchin.sav"
-    ),
-    "2015" = list(
-      stud_par_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schuele.sav",
-      stud_par_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schuele_1.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_LehrerI.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schulle.sav",
-      timing = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schuele_2.sav"
-    ),
-    "2018" = list(
-      stud_par_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_1.sav",
-      stud_par_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_2.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_4.sav",
-      timing = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_3.sav"
+      ),
+    # teach_dat_15j = list(list(zip_path = "?no_data_in_excel_table?", dat_subdir = "?")),
+    school_dat_15j = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2003-datasets/data-sets-in-txt-formats/INT_schi_2003.zip", dat_subdir = "INT_schi_2003.txt")
+      )
+  ),
+  "2006" = list(
+    stud_dat_15j = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Cogn06_S_Dec07.zip", dat_subdir = "INT_Stu06_Dec07.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Stu06_Dec07.zip", dat_subdir = "INT_Cogn06_S_Dec07.txt")),
+    # teach_dat = list(list(zip_path = "?no_data_in_excel_table?", dat_subdir = "?")),
+    school_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Sch06_Dec07.zip", dat_subdir = "INT_Sch06_Dec07.txt")),
+    par_dat_15j = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Par06_Dec07.zip", dat_subdir = "INT_Par06_Dec07.txt"))
+  ),
+  "2009" = list(
+    stud_par_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_STQ09_DEC11.zip", dat_subdir = "INT_STQ09_DEC11.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_PAR09_DEC11.zip", dat_subdir = "INT_PAR09_DEC11.zip"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_COG09_TD_DEC11.zip", dat_subdir = "INT_COG09_TD_DEC11.txt")),
+    # teach_dat = list(list(zip_path = "?no_data_in_excel_table?", dat_subdir = "?")),
+    school_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_SCQ09_Dec11.zip", dat_subdir = "INT_SCQ09_Dec11.txt"))
+  ),
+  "2012" = list(
+    stud_dat_15j = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_STU12_DEC03.zip", dat_subdir = "INT_COG12_S_DEC03.txt"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_COG12_S_DEC03.zip", dat_subdir = "INT_STU12_DEC03.txt")),
+    # teach_dat = list(list(zip_path = "?no_data_in_excel_table?", dat_subdir = "?")),
+    school_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_SCQ12_DEC03.zip", dat_subdir = "INT_SCQ12_DEC03.txt")),
+    par_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_PAQ12_DEC03.zip", dat_subdir = "INT_PAQ12_DEC03.txt"))
+    # matching = list(list(zip_path = "?no_data_in_excel_table?", dat_subdir = "?"))
+  ),
+  "2015" = list(
+    stud_par_dat_15j = list(
+      list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_QQQ.zip", dat_subdir = c("CY6_MS_CMB_STU_QQ2.sav", "CY6_MS_CMB_STU_QQQ.sav")),
+      list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_COG.zip", dat_subdir = "CY6_MS_CMB_STU_COG.sav")),
+    teach_dat = list(
+      list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_TCH_QQQ.zip", dat_subdir = "CY6_MS_CMB_TCH_QQQ.sav")),
+    school_dat = list(
+      list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_SCH_QQQ.zip", dat_subdir = "CY6_MS_CMB_SCH_QQQ.sav")),
+    timing = list(
+      list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_QTM.zip", dat_subdir = "CY6_MS_CMB_STU_QTM.sav"))
+  ),
+  "2018" = list(
+    stud_par_dat_15j = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_STU_QQQ.zip", dat_subdir = "CY07_MSU_STU_QQQ.sav"),
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_STU_COG.zip", dat_subdir = "CY07_MSU_STU_COG.sav")),
+    teach_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_TCH_QQQ.zip", dat_subdir = "CY07_MSU_TCH_QQQ.sav")),
+    school_dat = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_SCH_QQQ.zip", dat_subdir = "CY07_MSU_SCH_QQQ.sav")),
+    timing = list(
+      list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_STU_TIM.zip", dat_subdir = "CY07_MSU_STU_TIM.sav"))
     )
   )
 
