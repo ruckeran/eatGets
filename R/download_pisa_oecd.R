@@ -116,7 +116,8 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
   # Download the zip file
   zip_file <- file.path(temp_folder, "data.zip")
   tryCatch({
-    utils::download.file(url = zip_path, destfile = zip_file)
+    utils::download.file(url = zip_path, destfile = zip_file,
+                         headers = c("User-Agent" = "Mozilla/5.0")) #to bypass the error message "403 forbidden"
   }, error = function(e) {
     stop("Failed to download the file: ", e$message)
   })
