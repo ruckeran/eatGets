@@ -86,14 +86,14 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
     ),
     "2018" = list(
       stud_par_dat_15j = list(
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_STU_QQQ.zip", dat_subdir = "CY07_MSU_STU_QQQ.sav"),
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_STU_COG.zip", dat_subdir = "CY07_MSU_STU_COG.sav")),
+        list(zip_path = "https://webfs.oecd.org/pisa2018/SPSS_STU_QQQ.zip", dat_subdir = "CY07_MSU_STU_QQQ.sav"),
+        list(zip_path = "https://webfs.oecd.org/pisa2018/SPSS_STU_COG.zip", dat_subdir = "CY07_MSU_STU_COG.sav")),
       teach_dat = list(
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_TCH_QQQ.zip", dat_subdir = "CY07_MSU_TCH_QQQ.sav")),
+        list(zip_path = "https://webfs.oecd.org/pisa2018/SPSS_TCH_QQQ.zip", dat_subdir = "CY07_MSU_TCH_QQQ.sav")),
       school_dat = list(
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_SCH_QQQ.zip", dat_subdir = "CY07_MSU_SCH_QQQ.sav")),
+        list(zip_path = "https://webfs.oecd.org/pisa2018/SPSS_SCH_QQQ.zip", dat_subdir = "CY07_MSU_SCH_QQQ.sav")),
       timing = list(
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2018-datasets/ssas-sps-data-files/SPSS_STU_TIM.zip", dat_subdir = "CY07_MSU_STU_TIM.sav"))
+        list(zip_path = "https://webfs.oecd.org/pisa2018/SPSS_STU_TIM.zip", dat_subdir = "CY07_MSU_STU_TIM.sav"))
     )
   )
 
@@ -158,4 +158,5 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
   eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
 
   return(GADS)
+  }
 }
