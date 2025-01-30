@@ -1,9 +1,9 @@
-#' Download and import an empty OECD public use file.
+#' Download and import an empty TVD public use file.
 #'
-#' Download and import an empty OECD public use file (containing only the first data row) from the \href{https://www.oecd.org/en/data/datasets/}{OECD homepage}.
+#' Download and import an empty TVD public use file (containing only the first data row) from the \href{https://www.oecd.org/en/data/datasets/}{OECD homepage}.
 #'
 #' The function downloads a zip file from the OECD homepage into a temporary directory,
-#' unzips it and imports the data with only a single data row via \code{\link[haven]{read_sav}} or \code{\link[utils]{read.table}}.
+#' unzips it and imports the data with only a single data row via \code{\link[utils]{read.csv}}.
 #' For downloading full TVD data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
 #' The data is imported as a \code{GADSdat} object.
 #'
