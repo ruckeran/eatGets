@@ -1,17 +1,17 @@
 #' Download and import an empty OECD public use file.
 #'
-#' Download and import an empty OECD public use file (containing only the first data row) from the \href{https://www.oecd.org/en/data/datasets/}{IEA homepage}.
+#' Download and import an empty OECD public use file (containing only the first data row) from the \href{https://www.oecd.org/en/data/datasets/}{OECD homepage}.
 #'
 #' The function downloads a zip file from the OECD homepage into a temporary directory,
-#' unzips it and imports the data with only a single data row via \code{\link[haven]{read_sav}}.
-#' For downloading full ICILS data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
+#' unzips it and imports the data with only a single data row via \code{\link[haven]{read_sav}} or \code{\link[utils]{read.table}}.
+#' For downloading full PISA data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
 #' The data is imported as a \code{GADSdat} object.
 #'
 #'@param year Year of the assessment.
 #'@param data_type Type of the data.
 #'
 #'@examples
-#' oecd_pisa <- download_pisa_oecd(year = "2000",
+#' oecd_pisa <- download_pisa_oecd(year = "2018",
 #'                         data_type = "school_dat")
 #'@export
 download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", "2003", "2000"),

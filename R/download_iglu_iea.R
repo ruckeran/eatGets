@@ -4,7 +4,7 @@
 #'
 #' The function downloads a zip file from the IEA homepage into a temporary directory,
 #' unzips it and imports the data with only a single data row via \code{\link[haven]{read_sav}}.
-#' For downloading full ICILS data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
+#' For downloading full IGLU data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
 #' The data is imported as a \code{GADSdat} object.
 #'
 #'@param year Year of the assessment.
