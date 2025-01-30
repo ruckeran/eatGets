@@ -49,8 +49,9 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
     ),
     "2006" = list(
       stud_dat_15j = list(
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Cogn06_S_Dec07.zip", dat_subdir = "INT_Stu06_Dec07.txt"),
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Stu06_Dec07.zip", dat_subdir = "INT_Cogn06_S_Dec07.txt")),
+        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Cogn06_T_Dec07.zip", dat_subdir = "INT_Cogn06_T_Dec07.txt"),
+        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Cogn06_S_Dec07.zip", dat_subdir = "INT_Cogn06_S_Dec07.txt"),
+        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Stu06_Dec07.zip", dat_subdir = "INT_Stu06_Dec07.txt")),
       school_dat = list(
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2006-datasets/data-sets-in-txt-format/INT_Sch06_Dec07.zip", dat_subdir = "INT_Sch06_Dec07.txt")),
       par_dat_15j = list(
@@ -59,15 +60,15 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
     "2009" = list(
       stud_par_dat = list(
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_STQ09_DEC11.zip", dat_subdir = "INT_STQ09_DEC11.txt"),
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_PAR09_DEC11.zip", dat_subdir = "INT_PAR09_DEC11.zip"),
+        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_PAR09_DEC11.zip", dat_subdir = "INT_PAR09_DEC11.txt"),
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_COG09_TD_DEC11.zip", dat_subdir = "INT_COG09_TD_DEC11.txt")),
       school_dat = list(
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2009-datasets/data-sets-in-txt-format/INT_SCQ09_Dec11.zip", dat_subdir = "INT_SCQ09_Dec11.txt"))
     ),
     "2012" = list(
       stud_dat_15j = list(
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_STU12_DEC03.zip", dat_subdir = "INT_COG12_S_DEC03.txt"),
-        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_COG12_S_DEC03.zip", dat_subdir = "INT_STU12_DEC03.txt")),
+        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_STU12_DEC03.zip", dat_subdir = "INT_STU12_DEC03.txt"),
+        list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_COG12_S_DEC03.zip", dat_subdir = "INT_COG12_S_DEC03.txt")),
       school_dat = list(
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2012-datasets/main-survey/data-sets-in-txt-format/INT_SCQ12_DEC03.zip", dat_subdir = "INT_SCQ12_DEC03.txt")),
       par_dat = list(
@@ -75,7 +76,7 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
     ),
     "2015" = list(
       stud_par_dat_15j = list(
-        list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_QQQ.zip", dat_subdir = c("CY6_MS_CMB_STU_QQ2.sav", "CY6_MS_CMB_STU_QQQ.sav")),
+        list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_QQQ.zip", dat_subdir = c("CY6_MS_CMB_STU_QQQ.sav", "CY6_MS_CMB_STU_QQ2.sav")),
         list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_STU_COG.zip", dat_subdir = "CY6_MS_CMB_STU_COG.sav")),
       teach_dat = list(
         list(zip_path = "https://webfs.oecd.org/pisa/PUF_SPSS_COMBINED_CMB_TCH_QQQ.zip", dat_subdir = "CY6_MS_CMB_TCH_QQQ.sav")),
