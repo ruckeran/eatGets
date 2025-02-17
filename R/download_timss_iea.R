@@ -11,7 +11,7 @@
 #'@param data_type Type of the data.
 #'
 #'@examples
-#' fdz_timss <- download_timss(year = "2019",
+#' iea_timss <- download_timss(year = "2019",
 #'                         data_type = "stud_par_dat")
 #'@export
 download_timss <- function(year = c("2019", "2015", "2011", "2007"),
@@ -67,12 +67,39 @@ download_timss <- function(year = c("2019", "2015", "2011", "2007"),
   if (year %in% names(download_paths) &&
       data_type %in% names(download_paths[[year]])) {
 
-    download_path <- download_paths[[year]][[data_type]]
+    zip_path <- download_paths[[year]][[data_type]]$zip_path
+    dat_subdir <- download_paths[[year]][[data_type]]$dat_subdir
   } else {
     stop("The corresponding download has not been implemented yet.")
   }
 
-  ### read data
-  eatGADS::import_spss(download_path, checkVarNames = FALSE)
-  #haven::read_sav(download_path, n_max = 1, user_na = TRUE)
+  ## Set up temporary folder
+  temp_folder <- tempdir()
+
+  # Set timeout for downloading large files
+  old_timeout <- getOption("timeout")
+  options(timeout = max(300, old_timeout))
+  on.exit(options(timeout = old_timeout))
+
+  ## Download the zip file
+  zip_file <- file.path(temp_folder, "data.zip")
+  utils::download.file(url = zip_path, destfile = zip_file)
+
+  ## Recursive search for the file in the archive
+  zip_contents <- utils::unzip(zipfile = zip_file, list = TRUE)
+  matching_files <- zip_contents$Name[grepl(basename(dat_subdir), zip_contents$Name, ignore.case = TRUE)]
+
+  ## Unzip the required file from the archive
+  unzip_folder <- file.path(temp_folder, "unzipped_data")
+  utils::unzip(zipfile = zip_file, files = matching_files[1], exdir = unzip_folder)
+
+  ## Construct the full path to the extracted data file
+  extracted_file_path <- file.path(unzip_folder, matching_files[1])
+
+  ## Import the data using haven and convert to GADSdat
+  haven_dat <- haven::read_sav(extracted_file_path, n_max = 1, user_na = TRUE)
+  GADS <- eatGADS:::new_savDat(haven_dat)
+  eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
+
+  return(GADS)
 }
