@@ -57,7 +57,7 @@ download_iglu <- function(year = c("2016", "2011", "2006", "2001"),
 
     download_path <- download_paths[[year]][[data_type]]
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   ### read data

@@ -46,7 +46,7 @@ download_icils <- function(year = c("2018", "2013"),
 
     download_path <- download_paths[[year]][[data_type]]
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   ### read data

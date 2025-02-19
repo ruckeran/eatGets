@@ -37,7 +37,7 @@ download_tvd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_dat",
 
     download_path <- download_paths[[data_type]]
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The requested data type is not available.")
   }
 
   ### read data

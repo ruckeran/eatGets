@@ -54,7 +54,7 @@ download_timss <- function(year = c("2019", "2015", "2011", "2007"),
 
     download_path <- download_paths[[year]][[data_type]]
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   ### read data
