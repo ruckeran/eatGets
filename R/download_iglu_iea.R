@@ -28,7 +28,7 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
     "2001" = list(
       stud_par_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
-        dat_subdir = c("ASADEUR1.sav", "ASGDEUR1.sav", "ASHDEUr1.sav", "ASRDEUr1.sav", "ASTDEUR1.sav")
+        dat_subdir = c("ASGDEUR1.sav", "ASHDEUr1.sav")
       ),
       teach_ger_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2001/PIRLS2001_IDB_SPSS.zip",
@@ -68,7 +68,7 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
     "2011" = list(
       stud_par_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2011/PIRLS2011_IDB_SPSS.zip",
-        dat_subdir = c("asadeur3.sav", "asgdeur3.sav", "ashdeur3.sav", "asrdeur3.sav", "astdeur3.sav")
+        dat_subdir = c("asgdeur3.sav", "ashdeur3.sav")
       ),
       teach_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2011/PIRLS2011_IDB_SPSS.zip",
@@ -82,7 +82,7 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
     "2016" = list(
       stud_par_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-        dat_subdir = c("ASADEUR4.sav", "ASGDEUR4.sav", "ASHDEUR4.sav", "ASRDEUR4.sav", "ASTDEUR4.sav")
+        dat_subdir = c("ASGDEUR4.sav", "ASHDEUR4.sav")
       ),
       teach_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
@@ -90,16 +90,16 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
       ),
       teach_stud_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-        dat_subdir = "ATGDEUR4.sav"
-      ),  # Datensatz anpassen!
+        dat_subdir = "ASTDEUR4.sav"
+      ),
       school_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
         dat_subdir = "ACGDEUR4.sav"
       ),
       tracking = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/PIRLS/PIRLS2016/PIRLS2016_IDB_SPSS.zip",
-        dat_subdir = "ACGDEUR4.sav"
-      ) # Datensatz anpassen!
+        dat_subdir = "ASGDEUR4.sav"
+      ) # according to the codebook not all tracking variables are part of the student background file
     )
   )
 

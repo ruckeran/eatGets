@@ -26,11 +26,11 @@ download_tvd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_dat",
     stud_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-Student-Data.csv")),
     teach_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-Teacher-Data.csv")),
     teach_log_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-TeachLog-Data.csv")),
-    video_timss_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-VidComp-Data.csv")), #check necessary
-    video_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-VidInd-Data.csv")), #check necessary
-    video_subj_dat = list(list(zip_path = zip_url, dat_subdir = "?no_data_in_excel")),
-    video_teach_dat = list(list(zip_path = zip_url, dat_subdir = "?no_data_in_excel")),
-    video_third_dat = list(list(zip_path = zip_url, dat_subdir = "?no_data_in_excel")),
+    # video_timss_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-VidComp-Data.csv")), #check necessary
+    # video_dat = list(list(zip_path = zip_url, dat_subdir = "GTI-VidInd-Data.csv")), #check necessary
+    # video_subj_dat = list(list(zip_path = zip_url, dat_subdir = "?no_data_in_excel")),
+    # video_teach_dat = list(list(zip_path = zip_url, dat_subdir = "?no_data_in_excel")),
+    # video_third_dat = list(list(zip_path = zip_url, dat_subdir = "?no_data_in_excel")),
     artefact = list(list(zip_path = zip_url, dat_subdir = "GTI-Artefact-Data.csv"))
   )
 

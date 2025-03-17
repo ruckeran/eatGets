@@ -63,10 +63,10 @@ download_icils_iea <- function(year = c("2018", "2013"),
       school_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2018/ICILS2018_IDB_SPSS.zip",
         dat_subdir = "BTGDEUI1.sav"
-      # ),
-      # it_dat = list(
-      #   zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2018/ICILS2018_IDB_SPSS.zip",
-      #   dat_subdir = "CY07_MSU_STU_QQQ.sav"
+      ),
+      it_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2018/ICILS2018_IDB_SPSS.zip",
+        dat_subdir = "BTGDEUI1.sav"
       )
     )
   )
