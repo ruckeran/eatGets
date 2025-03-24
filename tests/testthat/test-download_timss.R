@@ -113,7 +113,43 @@ test_that("2019: tracking was successfully downloaded", {
 # error tests
 test_that("error for invalid combination", {
   expect_error(
-    download_icils(year = "2013", data_type = "it_dat"),
+    download_timss(year = "2007", data_type = "teach_stud_dat"),
     "The combination of year and data type is not available."
   )
 })
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_timss(year = "2007", data_type = "tracking"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_timss(year = "2011", data_type = "teach_stud_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_timss(year = "2011", data_type = "tracking"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_timss(year = "2015", data_type = "teach_stud_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_timss(year = "2015", data_type = "tracking"),
+    "The combination of year and data type is not available."
+  )
+})
+

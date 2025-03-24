@@ -137,8 +137,133 @@ test_that("2016: tracking was successfully downloaded", {
 # error tests
 test_that("error for invalid combination", {
   expect_error(
-    download_icils(year = "2013", data_type = "it_dat"),
+    download_iglu(year = "2001", data_type = "teach_dat"),
     "The combination of year and data type is not available."
   )
 })
 
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2001", data_type = "testscores"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2001", data_type = "teach_stud_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2001", data_type = "tracking"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2006", data_type = "teach_ger_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2006", data_type = "teach_math_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2006", data_type = "teach_gen_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2006", data_type = "teach_stud_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2006", data_type = "tracking"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2011", data_type = "teach_ger_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2011", data_type = "teach_math_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2011", data_type = "teach_gen_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2011", data_type = "testscores"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2011", data_type = "teach_stud_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2011", data_type = "tracking"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2016", data_type = "teach_ger_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2016", data_type = "teach_math_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2016", data_type = "teach_gen_dat"),
+    "The combination of year and data type is not available."
+  )
+})
+
+test_that("error for invalid combination", {
+  expect_error(
+    download_iglu(year = "2016", data_type = "testscores"),
+    "The combination of year and data type is not available."
+  )
+})

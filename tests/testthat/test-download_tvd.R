@@ -69,12 +69,3 @@ test_that("artefact was successfully downloaded", {
   # testing whether the data set is not empty
   expect_gt(ncol(fdz_tvd), 0)  # expecting more than 0 columns
 })
-
-# error tests
-test_that("error for invalid combination", {
-  expect_error(
-    download_icils(year = "2013", data_type = "it_dat"),
-    "The combination of year and data type is not available."
-  )
-})
-
