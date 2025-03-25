@@ -11,10 +11,10 @@
 #'@param data_type Type of the data.
 #'
 #'@examples
-#' iea_timss <- download_timss(year = "2019",
+#' iea_timss <- download_timss_iea(year = "2019",
 #'                         data_type = "stud_par_dat")
 #'@export
-download_timss <- function(year = c("2019", "2015", "2011", "2007"),
+download_timss_iea <- function(year = c("2019", "2015", "2011", "2007"),
                            data_type = c("stud_par_dat",
                                          "teach_dat", "teach_stud_dat",
                                          "school_dat",

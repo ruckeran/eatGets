@@ -10,9 +10,9 @@
 #'@param data_type Type of the data.
 #'
 #'@examples
-#' oecd_tvd <- download_tvd(data_type = "stud_dat")
+#' oecd_tvd <- download_tvd_oecd(data_type = "stud_dat")
 #'@export
-download_tvd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_dat",
+download_tvd_oecd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_dat",
                                        "video_timss_dat", "video_dat", "video_subj_dat",
                                        "video_teach_dat", "video_third_dat", "artefact")) {
 
