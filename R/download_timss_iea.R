@@ -43,11 +43,11 @@ download_timss_iea <- function(year = c("2019", "2015", "2011", "2007"),
     ),
     "2015" = list(
       stud_par_dat = list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intcogn_v4.zip", dat_subdir = c("ASGDEUM6.sav", "ASHDEUM6.sav")),
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/TIMSS/TIMSS2015/TIMSS2015_IDB_SPSS_G4.zip", dat_subdir = c("ASGDEUM6.sav", "ASHDEUM6.sav")),
       teach_dat = list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "ATGDEUM6.sav"),
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/TIMSS/TIMSS2015/TIMSS2015_IDB_SPSS_G4.zip", dat_subdir = "ATGDEUM6.sav"),
       school_dat = list(
-        zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2000-datasets/data-sets-in-txt-formats/intscho.zip", dat_subdir = "ACGDEUM6.sav")
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/TIMSS/TIMSS2015/TIMSS2015_IDB_SPSS_G4.zip", dat_subdir = "ACGDEUM6.sav")
     ),
     "2019" = list(
       stud_par_dat = list(
