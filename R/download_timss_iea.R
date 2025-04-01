@@ -72,7 +72,7 @@ download_timss_iea <- function(year = c("2019", "2015", "2011", "2007"),
     zip_path <- download_paths[[year]][[data_type]]$zip_path
     dat_subdir <- download_paths[[year]][[data_type]]$dat_subdir
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   ## Set up temporary folder

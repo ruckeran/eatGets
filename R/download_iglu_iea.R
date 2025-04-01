@@ -112,7 +112,7 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
     print(paste("zip_path:", zip_path))
     print(paste("dat_subdir:", dat_subdir))
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   ## Set up temporary folder

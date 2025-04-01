@@ -62,11 +62,11 @@ download_icils_iea <- function(year = c("2018", "2013"),
       ),
       school_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2018/ICILS2018_IDB_SPSS.zip",
-        dat_subdir = "BTGDEUI1.sav"
+        dat_subdir = "BCGDEUI2.sav"
       ),
       it_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2018/ICILS2018_IDB_SPSS.zip",
-        dat_subdir = "BTGDEUI1.sav"
+        dat_subdir = "BCGDEUI2.sav"
       )
     )
   )
@@ -78,7 +78,7 @@ download_icils_iea <- function(year = c("2018", "2013"),
     zip_path <- download_paths[[year]][[data_type]]$zip_path
     dat_subdir <- download_paths[[year]][[data_type]]$dat_subdir
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   ## Set up temporary folder

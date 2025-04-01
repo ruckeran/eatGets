@@ -822,3 +822,4 @@ test_that("error for invalid combination", {
     "The combination of year and data type is not available."
   )
 })
+

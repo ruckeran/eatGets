@@ -36,7 +36,7 @@ download_tvd_oecd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_
 
   # Check if the data type exists
   if (!(data_type %in% names(download_paths))) {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   # Extract zip_path and dat_subdir from the list

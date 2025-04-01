@@ -103,7 +103,7 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
     zip_path <- download_paths[[year]][[data_type]][[1]]$zip_path
     dat_subdir <- download_paths[[year]][[data_type]][[1]]$dat_subdir
   } else {
-    stop("The corresponding download has not been implemented yet.")
+    stop("The combination of year and data type is not available.")
   }
 
   # Set up temporary folder
