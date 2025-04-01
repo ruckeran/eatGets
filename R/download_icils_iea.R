@@ -107,7 +107,7 @@ download_icils_iea <- function(year = c("2018", "2013"),
   ## Import the data using haven and convert to GADSdat
   haven_dat <- haven::read_sav(extracted_file_path, n_max = 1, user_na = TRUE)
   GADS <- eatGADS:::new_savDat(haven_dat)
-  eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
+  GADS <- eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
 
   return(GADS)
 }

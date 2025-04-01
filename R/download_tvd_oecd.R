@@ -70,7 +70,7 @@ download_tvd_oecd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_
   ## Import the data using haven and convert to GADSdat
   haven_dat <- utils::read.csv(extracted_file_path, sep = ",", header = TRUE)
   GADS <- eatGADS:::new_savDat(haven_dat)
-  eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
+  GADS <- eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
 
   return(GADS)
 }

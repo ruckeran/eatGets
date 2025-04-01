@@ -157,7 +157,7 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
 
   # Converting to GADSdat
   GADS <- eatGADS:::new_savDat(haven_dat)
-  eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
+  GADS <- eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
 
   return(GADS)
   }
