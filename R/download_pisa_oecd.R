@@ -39,7 +39,7 @@ download_pisa_oecd <- function(year = c("2018", "2015", "2012", "2009", "2006", 
       )
     ),
     "2003" = list(
-      stud_dat_9kl = list(
+      stud_dat_15j = list(
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2003-datasets/data-sets-in-txt-formats/INT_cogn_2003.zip", dat_subdir = "INT_cogn_2003_v2.txt"),
         list(zip_path = "https://www.oecd.org/content/dam/oecd/en/data/datasets/pisa/pisa-2003-datasets/data-sets-in-txt-formats/INT_stui_2003_v2.zip", dat_subdir = "INT_stui_2003_v2.txt")
       ),
