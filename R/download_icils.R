@@ -25,18 +25,18 @@ download_icils <- function(year = c("2018", "2013"),
   # URL table for each study, year and data type
   download_paths <- list(
     "2013" = list(
-      stud_nat_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2013/ICILS2013_Schuel_1.sav",
-      stud_int_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2013/ICILS2013_Schuel.sav",
-      teach_nat_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2013/ICILS2013_Lehrer_1.sav",
-      teach_int_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2013/ICILS2013_Lehrer.sav",
-      school_nat_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2013/ICILS2013_Schull_1.sav",
-      school_int_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2013/ICILS2013_Schull.sav"
+      stud_nat_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/81/ICILS_2013_SchuelerInnen_nat_v2_Leerdaten.sav",
+      stud_int_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/81/ICILS_2013_SchuelerInnen_int_v2_Leerdaten.sav",
+      teach_nat_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/81/ICILS_2013_Lehrkraefte_nat_v1_Leerdaten.sav",
+      teach_int_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/81/ICILS_2013_Lehrkraefte_int_v1_Leerdaten.sav",
+      school_nat_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/81/ICILS_2013_Schulleitung_nat_v1_Leerdaten.sav",
+      school_int_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/81/ICILS_2013_Schulleitung_int_v1_Leerdaten.sav"
     ),
     "2018" = list(
-      stud_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2018/ICILS_2018_Schue.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2018/ICILS_2018_Lehrk.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2018/ICILS_2018_Schul.sav",
-      it_dat = "https://www.iqb.hu-berlin.de/fdz/studies/ICILS_2018/ICILS_2018_ITFra.sav"
+      stud_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/56/ICILS_2018_Schueler_innenfragebogen_v2_Leerdaten.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/56/ICILS_2018_Lehrkraeftefragebogen_v1_Leerdaten.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/56/ICILS_2018_Schulleitungsfragebogen_v1_Leerdaten.sav",
+      it_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/56/ICILS_2018_IT-Fragebogen_v1_Leerdaten.sav"
     )
   )
 

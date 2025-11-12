@@ -25,29 +25,29 @@ download_iglu <- function(year = c("2016", "2011", "2006", "2001"),
   # URL table for each study, year and data type
   download_paths <- list(
     "2001" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_SC_Lee.sav",
-      teach_ger_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_DE_Lee.sav",
-      teach_math_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_MA_Lee.sav",
-      teach_gen_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_SU_Lee.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2001/IGLU2001_SL_Lee.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/103/IGLU2001_SC_Lee.sav",
+      teach_ger_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/103/IGLU2001_DE_Lee.sav",
+      teach_math_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/103/IGLU2001_MA_Lee.sav",
+      teach_gen_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/103/IGLU2001_SU_Lee.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/103/IGLU2001_SL_Lee.sav"
     ),
     "2006" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_SC_EL_.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_DE_Lee.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_SL_Lee.sav",
-      testscores = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU-2006/IGLU2006_TS_Lee.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/130/IGLU2006_SC_EL_.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/130/IGLU2006_DE_Lee.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/130/IGLU2006_SL_Lee.sav",
+      testscores = "https://fdz.iqb.hu-berlin.de/media/study_files/130/IGLU2006_TS_Lee.sav"
     ),
     "2011" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2011/IGLU2011_SEFB_le.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2011/IGLU2011_LSFB_le.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2011/IGLU2011_SLFB_le.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/86/IGLU2011_SEFB_le.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/86/IGLU2011_LSFB_le.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/86/IGLU2011_SLFB_le.sav"
     ),
     "2016" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_SEFB_v1.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_LFB_v1_.sav",
-      teach_stud_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_LSFB_v1.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_SLFB_v1.sav",
-      tracking = "https://www.iqb.hu-berlin.de/fdz/studies/IGLU_2016/IGLU2016_TR_v1_L.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/80/IGLU2016_SEFB_v1.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/80/IGLU2016_LFB_v1_.sav",
+      teach_stud_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/80/IGLU2016_LSFB_v1.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/80/IGLU2016_SLFB_v1.sav",
+      tracking = "https://fdz.iqb.hu-berlin.de/media/study_files/80/IGLU2016_TR_v1_L.sav"
     )
   )
 

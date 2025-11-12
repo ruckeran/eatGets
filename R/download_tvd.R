@@ -20,15 +20,15 @@ download_tvd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_dat",
 
   # URL table for each study, year and data type
   download_paths <- list(
-    stud_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_student_data.sav",
-    teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Teacher_v1_L.sav",
-    teach_log_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Teacher_Log_.sav",
-    video_timss_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_TIMSS_Video_.sav",
-    video_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Video_v1_Lee.sav",
-    video_subj_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Video_Aggreg.sav",
-    video_teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Video_Aggreg_1.sav",
-    video_third_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Video_Third_.sav",
-    artefact = "https://www.iqb.hu-berlin.de/fdz/studies/TVD/TVD_Artefact_v1_.sav"
+    stud_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_student_data.sav",
+    teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Teacher_v2_Leerdaten.sav",
+    teach_log_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Teacher_Log_.sav",
+    video_timss_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_TIMSS_Video_.sav",
+    video_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Video_v1_Lee.sav",
+    video_subj_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Video_Aggreg.sav",
+    video_teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Video_Aggreg_1.sav",
+    video_third_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Video_Third_.sav",
+    artefact = "https://fdz.iqb.hu-berlin.de/media/study_files/54/TVD_Artefact_v1_.sav"
   )
 
 

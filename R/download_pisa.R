@@ -27,52 +27,52 @@ download_pisa <- function(year = c("2018", "2015", "2012", "2009", "2006", "2003
   # URL table for each study, year and data type
   download_paths <- list(
       "2000" = list(
-        stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2000/PISA2000_9kl_SC.sav",
-        stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2000/PISA2000_15J_SC.sav",
-        school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2000/PISA2000_Schule.sav"
+        stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/61/PISA2000_9kl_SC.sav",
+        stud_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/61/PISA2000_15J_SC.sav",
+        school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/61/PISA2000_Schule.sav"
       ),
       "2003" = list(
-        stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SC_9K.sav",
-        stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SC_15.sav",
-        teach_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_LE_9K.sav",
-        teach_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_LE_15.sav",
-        school_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SN_9K.sav",
-        school_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2003/PISA2003I_SN_15.sav"
+        stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SC_9K.sav",
+        stud_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SC_15.sav",
+        teach_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_LE_9K.sav",
+        teach_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_LE_15.sav",
+        school_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SN_9K.sav",
+        school_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SN_15.sav"
       ),
       "2006" = list(
-        stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_SC_9K.sav",
-        stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_SC_15.sav",
-        teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_LE_Le.sav",
-        school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_Schull.sav",
-        par_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_EL_9k.sav",
-        par_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2006/PISA2006I_EL_15.sav"
+        stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_SC_9K.sav",
+        stud_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_SC_15.sav",
+        teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_LE_Le.sav",
+        school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_Schull.sav",
+        par_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_EL_9k.sav",
+        par_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_EL_15.sav"
       ),
       "2009" = list(
-        stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2009/PISA09_Leer_SEFB.sav",
-        teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2009/PISA09_Leer_LFB.sav",
-        school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA-2009/PISA09_Leer_SLFB.sav"
+        stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/57/PISA09_Leer_SEFB.sav",
+        teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/57/PISA09_Leer_LFB.sav",
+        school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/57/PISA09_Leer_SLFB.sav"
       ),
       "2012" = list(
-        stud_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Schuele.sav",
-        stud_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Schuele_1.sav",
-        teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_LehrerI.sav",
-        school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Schulle.sav",
-        par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Eltern_.sav",
-        matching = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2012/PISA2012_Matchin.sav"
+        stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/53/PISA2012_Schuele.sav",
+        stud_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/53/PISA2012_Schuele_1.sav",
+        teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/53/PISA2012_LehrerI.sav",
+        school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/53/PISA2012_Schulle.sav",
+        par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/53/PISA2012_Eltern_.sav",
+        matching = "https://fdz.iqb.hu-berlin.de/media/study_files/53/PISA2012_Matchin.sav"
       ),
       "2015" = list(
-        stud_par_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schuele.sav",
-        stud_par_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schuele_1.sav",
-        teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_LehrerI.sav",
-        school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schulle.sav",
-        timing = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2015/PISA2015_Schuele_2.sav"
+        stud_par_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/98/PISA2015_Schuele.sav",
+        stud_par_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/98/PISA2015_Schuele_1.sav",
+        teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/98/PISA2015_LehrerI.sav",
+        school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/98/PISA2015_Schulle.sav",
+        timing = "https://fdz.iqb.hu-berlin.de/media/study_files/98/PISA2015_Schuele_2.sav"
       ),
       "2018" = list(
-        stud_par_dat_9kl = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_1.sav",
-        stud_par_dat_15j = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_2.sav",
-        teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa.sav",
-        school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_4.sav",
-        timing = "https://www.iqb.hu-berlin.de/fdz/studies/PISA_2018/PISA2018_Datensa_3.sav"
+        stud_par_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/77/PISA_2018_SchuelerInnen_Eltern_9Kl_v2_Leerdaten.sav",
+        stud_par_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/77/PISA_2018_SchuelerInnen_Eltern_15J_v2_Leerdaten.sav",
+        teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/77/PISA_2018_LehrerInnen_v2_Leerdaten.sav",
+        school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/77/PISA_2018_Schulleitung_v2_Leerdaten.sav",
+        timing = "https://fdz.iqb.hu-berlin.de/media/study_files/77/PISA_2018_Timing_15J_v2_Leerdaten.sav"
       )
     )
 

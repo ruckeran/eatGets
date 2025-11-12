@@ -25,26 +25,26 @@ download_timss <- function(year = c("2019", "2015", "2011", "2007"),
   # URL table for each study, year and data type
   download_paths <- list(
     "2007" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS2007/TIMSS2007_Leer_S.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS2007/TIMSS2007_Leer_L.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS2007/TIMSS2007_Leer_S_1.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/120/TIMSS2007_Leer_S.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/120/TIMSS2007_Leer_L.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/120/TIMSS2007_Leer_S_1.sav"
     ),
     "2011" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2011/TIMSS2011_SEFB_l.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2011/TIMSS2011_LSFB_l.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2011/TIMSS2011_SLFB_l.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/106/TIMSS2011_SEFB_l.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/106/TIMSS2011_LSFB_l.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/106/TIMSS2011_SLFB_l.sav"
     ),
     "2015" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2015_v2/TIMSS2015_SEFB_v.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2015_v2/TIMSS2015_LSFB_L.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2015_v2/TIMSS2015_SLFB_L.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/111/TIMSS2015_SEFB_v.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/111/TIMSS2015_LSFB_L.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/111/TIMSS2015_SLFB_L.sav"
     ),
     "2019" = list(
-      stud_par_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2019/TIMSS2019_HS_SEF.sav",
-      teach_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2019/TIMSS2019_HS_LFB.sav",
-      teach_stud_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2019/TIMSS2019_HS_LSF.sav",
-      school_dat = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2019/TIMSS2019_HS_SLF.sav",
-      tracking = "https://www.iqb.hu-berlin.de/fdz/studies/TIMSS_2019/TIMSS2019_HS_Tra.sav"
+      stud_par_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/100/TIMSS2019_MS_student_parent_quest_v4_1_Leerdaten.sav",
+      teach_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/100/TIMSS2019_MS_teacher_quest_v3_1_Leerdaten.sav",
+      teach_stud_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/100/TIMSS2019_MS_teacher_student_quest_v4_1_Leerdaten.sav",
+      school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/100/TIMSS2019_MS_principals_quest_v2_1_Leerdaten.sav",
+      tracking = "https://fdz.iqb.hu-berlin.de/media/study_files/100/TIMSS2019_MS_tracking_v2_Leerdaten.sav"
     )
   )
 
