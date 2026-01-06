@@ -4,15 +4,6 @@
 
 .download_pisa_edSurvey_to_GADS <- function(year, data_type) {
 
-# Check required packages
-  if (!requireNamespace("EdSurvey", quietly = TRUE)) {
-    stop("For years 2000–2012 the 'EdSurvey' package is required.")
-  }
-  if (!requireNamespace("stringr", quietly = TRUE) ||
-      !requireNamespace("tidyr",   quietly = TRUE)) {
-    stop("The packages 'stringr' and 'tidyr' are required for years 2000–2012.")
-  }
-
 ## 1) Download and read PISA using EdSurvey --------------------------------------------------------
 
   root <- tempdir()
@@ -23,7 +14,7 @@
     database = "INT"
   )
 
-  es_df <- EdSurvey::readPISA(
+  es_dat <- EdSurvey::readPISA(
     path        = file.path(root, "PISA", year),
     countries   = "deu",
     forceReread = TRUE
@@ -52,11 +43,11 @@
     stop("Data type '", data_type, "' is not implemented for years 2000–2012.")
   )
 
-  if (!dl_name %in% names(es_df$dataList)) {
+  if (!dl_name %in% names(es_dat$dataList)) {
     stop("Element '", dl_name, "' not found in EdSurvey object for year ", year, ".")
   }
 
-  file_format <- es_df$dataList[[dl_name]]$fileFormat
+  file_format <- es_dat$dataList[[dl_name]]$fileFormat
 
 
 ## 3) Parse labelValues into value / label pairs ---------------------------------------------------
@@ -148,7 +139,7 @@
   )
 
   # Empty data.frame with 0 rows but all variables
-  df <- as.data.frame(
+  dat <- as.data.frame(
     setNames(
       rep(list(character(0)), length(vars)),
       vars
@@ -159,7 +150,7 @@
 
 ## 6) Create GADSdat object ------------------------------------------------------------------------
 
-  gads <- eatGADS:::new_GADSdat(df, labels)
+  gads <- eatGADS:::new_GADSdat(dat, labels)
   gads
 }
 

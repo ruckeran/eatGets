@@ -13,5 +13,5 @@ Suggests:
     covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
-Imports: 
-    eatGADS
+Imports: eatGADS, EdSurvey (>= 4.1.0), dplyr, tidyr, stringr
+Remotes: American-Institutes-for-Research/EdSurvey
