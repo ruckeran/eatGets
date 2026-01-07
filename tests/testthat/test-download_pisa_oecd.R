@@ -366,20 +366,6 @@ test_that("early years: matching not available", {
 #
 # test_that("error for invalid combination", {
 #   expect_error(
-#     download_pisa_oecd(year = "2000", data_type = "matching"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2000", data_type = "timing"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
 #     download_pisa_oecd(year = "2003", data_type = "stud_par_dat"),
 #     "The combination of year and data type is not available."
 #   )
@@ -429,20 +415,6 @@ test_that("early years: matching not available", {
 # test_that("error for invalid combination", {
 #   expect_error(
 #     download_pisa_oecd(year = "2003", data_type = "school_dat"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2003", data_type = "matching"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2003", data_type = "timing"),
 #     "The combination of year and data type is not available."
 #   )
 # })
@@ -499,20 +471,6 @@ test_that("early years: matching not available", {
 # test_that("error for invalid combination", {
 #   expect_error(
 #     download_pisa_oecd(year = "2006", data_type = "school_dat_15j"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2006", data_type = "matching"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2006", data_type = "timing"),
 #     "The combination of year and data type is not available."
 #   )
 # })
@@ -596,20 +554,6 @@ test_that("early years: matching not available", {
 #
 # test_that("error for invalid combination", {
 #   expect_error(
-#     download_pisa_oecd(year = "2009", data_type = "matching"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2009", data_type = "timing"),
-#     "The combination of year and data type is not available."
-#   )
-# })
-#
-# test_that("error for invalid combination", {
-#   expect_error(
 #     download_pisa_oecd(year = "2012", data_type = "stud_par_dat"),
 #     "The combination of year and data type is not available."
 #   )
@@ -671,12 +615,6 @@ test_that("early years: matching not available", {
 #   )
 # })
 #
-# test_that("error for invalid combination", {
-#   expect_error(
-#     download_pisa_oecd(year = "2012", data_type = "timing"),
-#     "The combination of year and data type is not available."
-#   )
-# })
 
 test_that("error for invalid combination", {
   expect_error(

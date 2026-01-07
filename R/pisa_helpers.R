@@ -4,7 +4,7 @@
 
 .download_pisa_edSurvey_to_GADS <- function(year, data_type) {
 
-# 0) Short-circuit for unsupported types (avoiding downloads)
+# Short-circuit for non-available data types (avoiding downloads)
   if (data_type %in% c("timing", "matching")) {
     stop("Data type '", data_type, "' is not available for years 2000–2012.")
   }
