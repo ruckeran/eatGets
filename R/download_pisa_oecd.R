@@ -33,14 +33,14 @@ download_pisa_oecd <- function(
   data_type <- match.arg(data_type)
 
 
-## 1) Early years 2000–2012: EdSurvey workflow -----------------------------------------------------
+  ## 1) Early years 2000–2012: EdSurvey workflow -----------------------------------------------------
 
   early_years <- c("2000", "2003", "2006", "2009", "2012")
   if (year %in% early_years) {
     return(.download_pisa_edSurvey_to_GADS(year = year, data_type = data_type))
   }
 
-## 2) Later years 2015-2018: direct download from OECD ---------------------------------------------
+  ## 2) Later years 2015-2018: direct download from OECD ---------------------------------------------
 
   # URL table for each study, year, and data type
   download_paths <- list(

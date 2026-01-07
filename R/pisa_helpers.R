@@ -4,7 +4,7 @@
 
 .download_pisa_edSurvey_to_GADS <- function(year, data_type) {
 
-## 1) Download and read PISA using EdSurvey --------------------------------------------------------
+  ## 1) Download and read PISA using EdSurvey --------------------------------------------------------
 
   root <- tempdir()
 
@@ -20,7 +20,7 @@
     forceReread = TRUE
   )
 
-## 2) Assign data_type to EdSurvey dataList element ---------------------------------------------------
+  ## 2) Assign data_type to EdSurvey dataList element ---------------------------------------------------
 
   dl_name <- switch(
     data_type,
@@ -40,7 +40,6 @@
     "teach_dat_9kl"     = "Teacher",
     "timing"            = stop("Data type 'timing' is not available via EdSurvey for years 2000–2012."),
     "matching"          = stop("Data type 'matching' is not available via EdSurvey for years 2000–2012."),
-    stop("Data type '", data_type, "' is not implemented for years 2000–2012.")
   )
 
   if (!dl_name %in% names(es_dat$dataList)) {
@@ -48,9 +47,9 @@
   }
 
   file_format <- es_dat$dataList[[dl_name]]$fileFormat
+  file_format$variableName <- tolower(file_format$variableName)
 
-
-## 3) Parse labelValues into value / label pairs ---------------------------------------------------
+  ## 3) Parse labelValues into value / label pairs ---------------------------------------------------
 
   max_parts <- max(
     stringr::str_count(file_format$labelValues, "\\^"),
@@ -75,28 +74,28 @@
   # Reshape to long format
   long <- wide %>%
     tidyr::pivot_longer(
-    cols = dplyr::all_of(value_cols),
-    names_to      = "valnum",
-    values_to     = "pair",
-    values_drop_na = TRUE
-  ) %>%
-  # Split "code=label" into separate columns
+      cols = dplyr::all_of(value_cols),
+      names_to      = "valnum",
+      values_to     = "pair",
+      values_drop_na = TRUE
+    ) %>%
+    # Split "code=label" into separate columns
     tidyr::separate(
-    col  = pair,
-    into = c("code", "label"),
-    sep  = "=",
-    fill = "right"
-  ) %>%
-  # Standardize column names for GADSdat metadata
+      col  = pair,
+      into = c("code", "label"),
+      sep  = "=",
+      fill = "right"
+    ) %>%
+    # Standardize column names for GADSdat metadata
     dplyr::rename(
-    varName  = variableName,
-    varLabel = Labels,
-    value    = code,
-    valLabel = label
+      varName  = variableName,
+      varLabel = Labels,
+      value    = code,
+      valLabel = label
     )
 
 
-## 4) Create missing tags --------------------------------------------------------------------------
+  ## 4) Create missing tags --------------------------------------------------------------------------
 
   setMissingTags <- function(val, miss_str) {
     val_chr <- as.character(val)
@@ -108,7 +107,7 @@
   long$missings <- mapply(setMissingTags, long$value, long$missing, USE.NAMES = FALSE)
 
 
-## 5) Build GADS label data.frames and empty data.frame --------------------------------------------
+  ## 5) Build GADS label data.frames and empty data.frame --------------------------------------------
 
   vars <- file_format$variableName
   n    <- length(vars)
@@ -148,7 +147,7 @@
   )
 
 
-## 6) Create GADSdat object ------------------------------------------------------------------------
+  ## 6) Create GADSdat object ------------------------------------------------------------------------
 
   gads <- eatGADS:::new_GADSdat(dat, labels)
   gads
@@ -181,6 +180,8 @@
     checkVarNames  = FALSE,
     labeledStrings = "drop"
   )
+  names(GADS$dat)     <- tolower(names(GADS$dat))
+  GADS$labels$varName <- tolower(GADS$labels$varName)
 
   GADS
 }
