@@ -4,6 +4,12 @@
 
 .download_pisa_edSurvey_to_GADS <- function(year, data_type) {
 
+# 0) Short-circuit for unsupported types (avoiding downloads)
+  if (data_type %in% c("timing", "matching")) {
+    stop("Data type '", data_type, "' is not available for years 2000–2012.")
+  }
+
+
   ## 1) Download and read PISA using EdSurvey --------------------------------------------------------
 
   root <- tempdir()
@@ -38,8 +44,6 @@
     "teach_dat"         = "Teacher",
     "teach_dat_15j"     = "Teacher",
     "teach_dat_9kl"     = "Teacher",
-    "timing"            = stop("Data type 'timing' is not available via EdSurvey for years 2000–2012."),
-    "matching"          = stop("Data type 'matching' is not available via EdSurvey for years 2000–2012."),
   )
 
   if (!dl_name %in% names(es_dat$dataList)) {
