@@ -815,10 +815,3 @@ test_that("error for invalid combination", {
     "The combination of year and data type is not available."
   )
 })
-
-test_that("error for invalid combination", {
-  expect_error(
-    download_pisa(year = "2015", data_type = "matching"),
-    "The combination of year and data type is not available."
-  )
-})
