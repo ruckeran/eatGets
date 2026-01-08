@@ -1,12 +1,12 @@
 # --------------------------------------------------------------------------------------------------
 # Internal helper I:
-# Download PISA 2000–2012 via EdSurvey and convert to an empty GADSdat with full metadata. ---------
+# Download PISA 2000-2012 via EdSurvey and convert to an empty GADSdat with full metadata. ---------
 
 .download_pisa_edSurvey_to_GADS <- function(year, data_type) {
 
 # Short-circuit for non-available data types (avoiding downloads)
   if (data_type %in% c("timing", "matching")) {
-    stop("Data type '", data_type, "' is not available for years 2000–2012.")
+    stop("Data type '", data_type, "' is not available for years 2000-2012.")
   }
 
 
