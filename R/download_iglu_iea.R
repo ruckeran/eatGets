@@ -109,8 +109,6 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
 
     zip_path <- download_paths[[year]][[data_type]]$zip_path
     dat_subdir <- download_paths[[year]][[data_type]]$dat_subdir
-    print(paste("zip_path:", zip_path))
-    print(paste("dat_subdir:", dat_subdir))
   } else {
     stop("The combination of year and data type is not available.")
   }
