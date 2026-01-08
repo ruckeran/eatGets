@@ -231,7 +231,7 @@ test_that("2015: timing was successfully downloaded", {
 })
 
 test_that("2018: stud_par_dat_9kl was successfully downloaded", {
-  oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "stud_par_dat_9kl")
+  oecd_pisa <- download_pisa_oecd(year = "2018", data_type = "stud_par_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
   # testing whether the data set is not empty
@@ -239,7 +239,7 @@ test_that("2018: stud_par_dat_9kl was successfully downloaded", {
 })
 
 test_that("2018: stud_par_dat_15j was successfully downloaded", {
-  oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "stud_par_dat_15j")
+  oecd_pisa <- download_pisa_oecd(year = "2018", data_type = "stud_par_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
   # testing whether the data set is not empty
@@ -247,7 +247,7 @@ test_that("2018: stud_par_dat_15j was successfully downloaded", {
 })
 
 test_that("2018: teach_dat was successfully downloaded", {
-  oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "teach_dat")
+  oecd_pisa <- download_pisa_oecd(year = "2018", data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
   # testing whether the data set is not empty
@@ -255,7 +255,7 @@ test_that("2018: teach_dat was successfully downloaded", {
 })
 
 test_that("2018: school_dat was successfully downloaded", {
-  oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "school_dat")
+  oecd_pisa <- download_pisa_oecd(year = "2018", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
   # testing whether the data set is not empty
@@ -263,7 +263,7 @@ test_that("2018: school_dat was successfully downloaded", {
 })
 
 test_that("2018: timing was successfully downloaded", {
-  oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "timing")
+  oecd_pisa <- download_pisa_oecd(year = "2018", data_type = "timing")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
   # testing whether the data set is not empty
