@@ -750,10 +750,3 @@ test_that("error for invalid combination", {
   )
 })
 
-test_that("error for invalid combination", {
-  expect_error(
-    download_pisa_oecd(year = "2015", data_type = "matching"),
-    "The combination of year and data type is not available."
-  )
-})
-
