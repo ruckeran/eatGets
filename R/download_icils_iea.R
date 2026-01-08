@@ -30,26 +30,17 @@ download_icils_iea <- function(year = c("2018", "2013"),
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2013/ICILS2013_IDB_SPSS.zip",
         dat_subdir = "BSGDEUI1.sav"
       ),
-      # stud_int_dat = list(
-      #   zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2013/ICILS2013_IDB_SPSS.zip",
-      #   dat_subdir = "CY07_MSU_STU_QQQ.sav"
-      # ),
+      # TODO: Implement support for 2013 student international data (stud_int_dat) when the correct file path is confirmed.
       teach_nat_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2013/ICILS2013_IDB_SPSS.zip",
         dat_subdir = "BTGDEUI1.sav"
       ),
-      # teach_int_dat = list(
-      #   zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2013/ICILS2013_IDB_SPSS.zip",
-      #   dat_subdir = "CY07_MSU_STU_QQQ.sav"
-      # ),
+      # TODO: Implement support for 2013 teacher international data (teach_int_dat) when the correct file path is confirmed.
       school_nat_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2013/ICILS2013_IDB_SPSS.zip",
         dat_subdir = "BCGDEUI1.sav"
-      # ),
-      # school_int_dat = list(
-      #   zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2013/ICILS2013_IDB_SPSS.zip",
-      #   dat_subdir = "CY07_MSU_STU_QQQ.sav"
       )
+      # TODO: Implement support for 2013 school international data (school_int_dat) when the correct file path is confirmed.
     ),
     "2018" = list(
       stud_dat = list(
