@@ -25,6 +25,8 @@ For downloading full IGLU data sets see the \href{https://cran.r-project.org/pac
 The data is imported as a \code{GADSdat} object.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 iea_iglu <- download_iglu_iea(year = "2016",
                         data_type = "stud_par_dat")
+\dontshow{\}) # examplesIf}
 }

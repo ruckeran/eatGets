@@ -22,5 +22,7 @@ For downloading full TVD data sets see the \href{https://cran.r-project.org/pack
 The data is imported as a \code{GADSdat} object.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 oecd_tvd <- download_tvd_oecd(data_type = "stud_dat")
+\dontshow{\}) # examplesIf}
 }

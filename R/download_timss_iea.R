@@ -10,7 +10,7 @@
 #'@param year Year of the assessment.
 #'@param data_type Type of the data.
 #'
-#'@examples
+#'@examplesIf interactive()
 #' iea_timss <- download_timss_iea(year = "2019",
 #'                         data_type = "stud_par_dat")
 #'@export

@@ -25,6 +25,8 @@ For downloading full ICILS data sets see the \href{https://cran.r-project.org/pa
 The data is imported as a \code{GADSdat} object.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 iea_icils <- download_icils_iea(year = "2018",
                         data_type = "stud_dat")
+\dontshow{\}) # examplesIf}
 }

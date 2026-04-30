@@ -10,7 +10,7 @@
 #'@param year Year of the assessment.
 #'@param data_type Type of the data.
 #'
-#'@examples
+#'@examplesIf interactive()
 #' iea_iglu <- download_iglu_iea(year = "2016",
 #'                         data_type = "stud_par_dat")
 #'@export

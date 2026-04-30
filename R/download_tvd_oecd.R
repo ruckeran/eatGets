@@ -9,7 +9,7 @@
 #'
 #'@param data_type Type of the data.
 #'
-#'@examples
+#'@examplesIf interactive()
 #' oecd_tvd <- download_tvd_oecd(data_type = "stud_dat")
 #'@export
 download_tvd_oecd <- function(data_type = c("stud_dat", "teach_dat", "teach_log_dat",

@@ -10,7 +10,7 @@
 #'@param year Year of the assessment.
 #'@param data_type Type of the data.
 #'
-#'@examples
+#'@examplesIf interactive()
 #' iea_icils <- download_icils_iea(year = "2018",
 #'                         data_type = "stud_dat")
 #'@export

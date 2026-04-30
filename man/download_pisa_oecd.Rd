@@ -32,6 +32,8 @@ temporary directory, unzips it and imports the data via
 For downloading full PISA data sets see the \href{https://cran.r-project.org/package=EdSurvey}{EdSurvey} package.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 oecd_pisa <- download_pisa_oecd(year = "2018",
                         data_type = "school_dat")
+\dontshow{\}) # examplesIf}
 }

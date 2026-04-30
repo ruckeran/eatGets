@@ -15,7 +15,7 @@
 #' @param year Year of the assessment.
 #' @param data_type Type of the data.
 #'
-#' @examples
+#' @examplesIf interactive()
 #' oecd_pisa <- download_pisa_oecd(year = "2018",
 #'                         data_type = "school_dat")
 #' @export
