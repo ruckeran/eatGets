@@ -1,0 +1,9 @@
+url: https://ruckeran.github.io/eatGets/
+
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left: [reference, news]
+    right: [github]

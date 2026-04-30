@@ -24,6 +24,8 @@ For downloading full TIMSS data sets see the \href{https://cran.r-project.org/pa
 The data is imported as a \code{GADSdat} object.
 }
 \examples{
+\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
 iea_timss <- download_timss_iea(year = "2019",
                         data_type = "stud_par_dat")
+\dontshow{\}) # examplesIf}
 }
