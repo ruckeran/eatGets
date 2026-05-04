@@ -1,18 +1,21 @@
 Package: eatGets
-Title: Downloading and importing data sets
+Title: Downloading and Importing Data Sets
 Version: 0.0.1
 Authors@R: c(
     person("Annegret", "Rucker", email = "annegret.rucker@iqb.hu-berlin.de", role = c("aut", "cre")),
-    person("Benjamin", "Becker", email = "b.becker@iqb.hu-berlin.de", role = c("aut", "ctb")))
+    person("Benjamin", "Becker", email = "b.becker@iqb.hu-berlin.de", role = c("aut", "ctb"))
+    )
 Description: Download and import data sets from the FDZ and OECD/IEA homepage in order to compare them.
 License: MIT + file LICENSE
 URL: https://ruckeran.github.io/eatGets/, https://github.com/ruckeran/eatGets
-BugReports: https://github.com/ruckeran/eatGets/issues 
+BugReports: https://github.com/ruckeran/eatGets/issues
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Suggests: 
+Suggests:
     covr,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports: eatGADS, EdSurvey (>= 4.1.0), dplyr, tidyr, stringr
+Remotes:
+    American-Institutes-for-Research/EdSurvey
