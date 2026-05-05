@@ -119,6 +119,10 @@ test_that("2006: par_dat_15j was successfully downloaded", {
 })
 
 test_that("2009: stud_par_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping external PISA 2009 download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   fdz_pisa <- download_pisa(year = "2009", data_type = "stud_par_dat")
   # testing if result is a data frame
   expect_s3_class(fdz_pisa, "GADSdat")
@@ -127,6 +131,10 @@ test_that("2009: stud_par_dat was successfully downloaded", {
 })
 
 test_that("2009: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping external PISA 2009 download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   fdz_pisa <- download_pisa(year = "2009", data_type = "teach_dat")
   # testing if result is a data frame
   expect_s3_class(fdz_pisa, "GADSdat")
@@ -135,6 +143,10 @@ test_that("2009: teach_dat was successfully downloaded", {
 })
 
 test_that("2009: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping external PISA 2009 download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   fdz_pisa <- download_pisa(year = "2009", data_type = "school_dat")
   # testing if result is a data frame
   expect_s3_class(fdz_pisa, "GADSdat")
