@@ -32,12 +32,12 @@ download_pisa <- function(year = c("2018", "2015", "2012", "2009", "2006", "2003
       school_dat = "https://fdz.iqb.hu-berlin.de/media/study_files/61/PISA2000_Schule.sav"
     ),
     "2003" = list(
-      stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SC_9K.sav",
-      stud_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SC_15.sav",
-      teach_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_LE_9K.sav",
-      teach_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_LE_15.sav",
-      school_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SN_9K.sav",
-      school_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003I_SN_15.sav"
+      stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003_I_9grade_students_v2_Leerdaten.sav",
+      stud_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003_I_15y_students_v2_Leerdaten.sav",
+      teach_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003_I_9grade_teacher_v2_Leerdaten.sav",
+      teach_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003_I_15y_teacher_v2_Leerdaten.sav",
+      school_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003_I_9grade_schools_v2_Leerdaten.sav",
+      school_dat_15j = "https://fdz.iqb.hu-berlin.de/media/study_files/66/PISA2003_I_15y_schools_v2_Leerdaten.sav"
     ),
     "2006" = list(
       stud_dat_9kl = "https://fdz.iqb.hu-berlin.de/media/study_files/59/PISA2006I_SC_9K.sav",
