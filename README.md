@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# eatGets
+# eatGets <a href="https://ruckeran.github.io/eatGets/"><img src="man/figures/logo.png" align="right" height="120" alt="eatGets website" /></a>
 
 <!-- badges: start -->
 
