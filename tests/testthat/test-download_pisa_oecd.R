@@ -1,4 +1,8 @@
 test_that("2000: stud_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2000", data_type = "stud_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -7,6 +11,10 @@ test_that("2000: stud_dat_9kl was successfully downloaded", {
 })
 
 test_that("2000: stud_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2000", data_type = "stud_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -15,6 +23,10 @@ test_that("2000: stud_dat_15j was successfully downloaded", {
 })
 
 test_that("2000: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2000", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -23,6 +35,10 @@ test_that("2000: school_dat was successfully downloaded", {
 })
 
 test_that("2003: stud_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2003", data_type = "stud_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -31,6 +47,10 @@ test_that("2003: stud_dat_9kl was successfully downloaded", {
 })
 
 test_that("2003: stud_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2003", data_type = "stud_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -39,6 +59,10 @@ test_that("2003: stud_dat_15j was successfully downloaded", {
 })
 
 test_that("2003: teach_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2003", data_type = "teach_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -47,6 +71,10 @@ test_that("2003: teach_dat_9kl was successfully downloaded", {
 })
 
 test_that("2003: teach_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2003", data_type = "teach_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -55,6 +83,10 @@ test_that("2003: teach_dat_15j was successfully downloaded", {
 })
 
 test_that("2003: school_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2003", data_type = "school_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -63,6 +95,10 @@ test_that("2003: school_dat_9kl was successfully downloaded", {
 })
 
 test_that("2003: school_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2003", data_type = "school_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -71,6 +107,10 @@ test_that("2003: school_dat_15j was successfully downloaded", {
 })
 
 test_that("2006: stud_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2006", data_type = "stud_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -79,6 +119,10 @@ test_that("2006: stud_dat_9kl was successfully downloaded", {
 })
 
 test_that("2006: stud_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2006", data_type = "stud_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -87,6 +131,10 @@ test_that("2006: stud_dat_15j was successfully downloaded", {
 })
 
 test_that("2006: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2006", data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -95,6 +143,10 @@ test_that("2006: teach_dat was successfully downloaded", {
 })
 
 test_that("2006: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2006", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -103,6 +155,10 @@ test_that("2006: school_dat was successfully downloaded", {
 })
 
 test_that("2006: par_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2006", data_type = "par_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -111,6 +167,10 @@ test_that("2006: par_dat_9kl was successfully downloaded", {
 })
 
 test_that("2006: par_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2006", data_type = "par_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -119,6 +179,10 @@ test_that("2006: par_dat_15j was successfully downloaded", {
 })
 
 test_that("2009: stud_par_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2009", data_type = "stud_par_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -127,6 +191,10 @@ test_that("2009: stud_par_dat was successfully downloaded", {
 })
 
 test_that("2009: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2009", data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -135,6 +203,10 @@ test_that("2009: teach_dat was successfully downloaded", {
 })
 
 test_that("2009: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2009", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -143,6 +215,10 @@ test_that("2009: school_dat was successfully downloaded", {
 })
 
 test_that("2012: stud_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2012", data_type = "stud_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -151,6 +227,10 @@ test_that("2012: stud_dat_9kl was successfully downloaded", {
 })
 
 test_that("2012: stud_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2012", data_type = "stud_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -159,6 +239,10 @@ test_that("2012: stud_dat_15j was successfully downloaded", {
 })
 
 test_that("2012: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2012", data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -167,6 +251,10 @@ test_that("2012: teach_dat was successfully downloaded", {
 })
 
 test_that("2012: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2012", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -175,6 +263,10 @@ test_that("2012: school_dat was successfully downloaded", {
 })
 
 test_that("2012: par_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2012", data_type = "par_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -183,6 +275,10 @@ test_that("2012: par_dat was successfully downloaded", {
 })
 
 test_that("2012: matching was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2012", data_type = "matching")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -191,6 +287,10 @@ test_that("2012: matching was successfully downloaded", {
 })
 
 test_that("2015: stud_par_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "stud_par_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -199,6 +299,10 @@ test_that("2015: stud_par_dat_9kl was successfully downloaded", {
 })
 
 test_that("2015: stud_par_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "stud_par_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -207,6 +311,10 @@ test_that("2015: stud_par_dat_15j was successfully downloaded", {
 })
 
 test_that("2015: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -215,6 +323,10 @@ test_that("2015: teach_dat was successfully downloaded", {
 })
 
 test_that("2015: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -223,6 +335,10 @@ test_that("2015: school_dat was successfully downloaded", {
 })
 
 test_that("2015: timing was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "timing")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -231,6 +347,10 @@ test_that("2015: timing was successfully downloaded", {
 })
 
 test_that("2018: stud_par_dat_9kl was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "stud_par_dat_9kl")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -239,6 +359,10 @@ test_that("2018: stud_par_dat_9kl was successfully downloaded", {
 })
 
 test_that("2018: stud_par_dat_15j was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "stud_par_dat_15j")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -247,6 +371,10 @@ test_that("2018: stud_par_dat_15j was successfully downloaded", {
 })
 
 test_that("2018: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -255,6 +383,10 @@ test_that("2018: teach_dat was successfully downloaded", {
 })
 
 test_that("2018: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "school_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -263,6 +395,10 @@ test_that("2018: school_dat was successfully downloaded", {
 })
 
 test_that("2018: timing was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_pisa <- download_pisa_oecd(year = "2015", data_type = "timing")
   # testing if result is a GADSdat
   expect_s3_class(oecd_pisa, "GADSdat")
@@ -274,14 +410,14 @@ test_that("2018: timing was successfully downloaded", {
 test_that("early years: timing not available", {
   expect_error(
     download_pisa_oecd(year = "2009", data_type = "timing"),
-    "Data type 'timing' is not available for years 2000–2012."
+    "Data type 'timing' is not available for years 2000-2012."
   )
 })
 
 test_that("early years: matching not available", {
   expect_error(
     download_pisa_oecd(year = "2009", data_type = "matching"),
-    "Data type 'matching' is not available for years 2000–2012."
+    "Data type 'matching' is not available for years 2000-2012."
   )
 })
 

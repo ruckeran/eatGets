@@ -1,4 +1,8 @@
 test_that("stud_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "stud_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -7,6 +11,10 @@ test_that("stud_dat was successfully downloaded", {
 })
 
 test_that("teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -15,6 +23,10 @@ test_that("teach_dat was successfully downloaded", {
 })
 
 test_that("teach_log_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "teach_log_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -23,6 +35,10 @@ test_that("teach_log_dat was successfully downloaded", {
 })
 
 test_that("video_timss_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "video_timss_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -31,6 +47,10 @@ test_that("video_timss_dat was successfully downloaded", {
 })
 
 test_that("video_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "video_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -39,6 +59,10 @@ test_that("video_dat was successfully downloaded", {
 })
 
 test_that("video_subj_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "video_subj_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -47,6 +71,10 @@ test_that("video_subj_dat was successfully downloaded", {
 })
 
 test_that("video_teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "video_teach_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -55,6 +83,10 @@ test_that("video_teach_dat was successfully downloaded", {
 })
 
 test_that("video_third_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "video_third_dat")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
@@ -63,6 +95,10 @@ test_that("video_third_dat was successfully downloaded", {
 })
 
 test_that("artefact was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
   oecd_tvd <- download_tvd_oecd(data_type = "artefact")
   # testing if result is a GADSdat
   expect_s3_class(oecd_tvd, "GADSdat")
