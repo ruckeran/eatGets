@@ -1,0 +1,34 @@
+on:
+  workflow_dispatch:
+
+name: large-download-tests
+
+permissions: read-all
+
+jobs:
+  large-download-tests:
+    runs-on: ubuntu-latest
+
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+      EATGETS_RUN_DOWNLOAD_TESTS: "true"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-pandoc@v2
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+          extra-repositories: |
+            https://american-institutes-for-research.r-universe.dev
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::devtools
+          needs: check
+
+      - name: Run large download tests
+        run: devtools::test()
+        shell: Rscript {0}
