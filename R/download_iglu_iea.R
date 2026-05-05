@@ -181,8 +181,10 @@ download_iglu_iea <- function(year = c("2016", "2011", "2006", "2001"),
   }
 
   ## Convert to GADSdat
-  GADS <- eatGADS:::new_savDat(combined_data)
-  GADS <- eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
+  new_savDat <- getFromNamespace("new_savDat", "eatGADS")
+  prepare_labels <- getFromNamespace("prepare_labels", "eatGADS")
+  GADS <- new_savDat(combined_data)
+  GADS <- prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
 
   return(GADS)
 }

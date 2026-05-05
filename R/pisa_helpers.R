@@ -1,3 +1,12 @@
+# Prepare for skipping warning for unexported internal functions
+new_GADSdat <- getFromNamespace("new_GADSdat", "eatGADS")
+new_savDat <- getFromNamespace("new_savDat", "eatGADS")
+prepare_labels <- getFromNamespace("prepare_labels", "eatGADS")
+
+#' @importFrom stats na.omit setNames
+#' @importFrom utils getFromNamespace
+NULL
+
 # --------------------------------------------------------------------------------------------------
 # Internal helper I:
 # Download PISA 2000-2012 via EdSurvey and convert to an empty GADSdat with full metadata. ---------
@@ -69,27 +78,27 @@
     into = value_cols,
     sep  = "\\^",
     fill = "right"
-  ) %>%
+  ) |>
     dplyr::select(
       dplyr::any_of(c("variableName", "Labels", "missing")),
       dplyr::all_of(value_cols)
     )
 
   # Reshape to long format
-  long <- wide %>%
+  long <- wide |>
     tidyr::pivot_longer(
       cols = dplyr::all_of(value_cols),
       names_to      = "valnum",
       values_to     = "pair",
       values_drop_na = TRUE
-    ) %>%
+    ) |>
     # Split "code=label" into separate columns
     tidyr::separate(
       col  = pair,
       into = c("code", "label"),
       sep  = "=",
       fill = "right"
-    ) %>%
+    ) |>
     # Standardize column names for GADSdat metadata
     dplyr::rename(
       varName  = variableName,
@@ -153,7 +162,7 @@
 
   ## 6) Create GADSdat object ------------------------------------------------------------------------
 
-  gads <- eatGADS:::new_GADSdat(dat, labels)
+  gads <- new_GADSdat(dat, labels)
   gads
 }
 
@@ -178,8 +187,8 @@
   }
 
   # Converting to GADSdat
-  GADS <- eatGADS:::new_savDat(haven_dat)
-  GADS <- eatGADS:::prepare_labels(
+  GADS <- new_savDat(haven_dat)
+  GADS <- prepare_labels(
     GADS,
     checkVarNames  = FALSE,
     labeledStrings = "drop"

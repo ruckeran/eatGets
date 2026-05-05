@@ -100,8 +100,10 @@ download_timss_iea <- function(year = c("2019", "2015", "2011", "2007"),
 
   ## Import the data using haven and convert to GADSdat
   haven_dat <- haven::read_sav(extracted_file_path, n_max = 1, user_na = TRUE)
-  GADS <- eatGADS:::new_savDat(haven_dat)
-  GADS <- eatGADS:::prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
+  new_savDat <- getFromNamespace("new_savDat", "eatGADS")
+  prepare_labels <- getFromNamespace("prepare_labels", "eatGADS")
+  GADS <- new_savDat(haven_dat)
+  GADS <- prepare_labels(GADS, checkVarNames = FALSE, labeledStrings = "drop")
 
   return(GADS)
 }
