@@ -14,7 +14,7 @@
 #' iea_icils <- download_icils_iea(year = "2018",
 #'                         data_type = "stud_dat")
 #'@export
-download_icils_iea <- function(year = c("2018", "2013"),
+download_icils_iea <- function(year = c("2023", "2018", "2013"),
                                data_type = c("stud_dat", "stud_nat_dat", "stud_int_dat",
                                              "teach_dat", "teach_nat_dat", "teach_int_dat",
                                              "school_dat", "school_nat_dat", "school_int_dat",
@@ -67,7 +67,25 @@ download_icils_iea <- function(year = c("2018", "2013"),
       it_dat = list(
         zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2018/ICILS2018_IDB_SPSS.zip",
         dat_subdir = "BCGDEUI2.sav"
+      ),
+    "2023" = list(
+      stud_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2023/ICILS2023_IDB_SPSS.zip",
+        dat_subdir = "BSGDEUI3.sav"
+      ),
+      teach_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2023/ICILS2023_IDB_SPSS.zip",
+        dat_subdir = "BTGDEUI3.sav"
+      ),
+      school_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2023/ICILS2023_IDB_SPSS.zip",
+        dat_subdir = "BCGDEUI3.sav"
+      ),
+      it_dat = list(
+        zip_path = "https://www.iea.nl/sites/default/files/data-repository/ICILS/ICILS2023/ICILS2023_IDB_SPSS.zip",
+        dat_subdir = "BCGDEUI3.sav"
       )
+    )
     )
   )
 
