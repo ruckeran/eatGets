@@ -5,7 +5,7 @@
 \title{Download and import an empty ICILS public use file.}
 \usage{
 download_icils_iea(
-  year = c("2018", "2013"),
+  year = c("2023", "2018", "2013"),
   data_type = c("stud_dat", "stud_nat_dat", "stud_int_dat", "teach_dat", "teach_nat_dat",
     "teach_int_dat", "school_dat", "school_nat_dat", "school_int_dat", "it_dat")
 )
