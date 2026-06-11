@@ -118,6 +118,54 @@ test_that("2018: it_dat was successfully downloaded", {
   expect_gt(ncol(iea_icils$dat), 0)  # expecting more than 0 columns
 })
 
+test_that("2023: stud_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
+  iea_icils <- download_icils_iea(year = "2023", data_type = "stud_dat")
+  # testing if result is a GADSdat
+  expect_s3_class(iea_icils, "GADSdat")
+  # testing whether the data set is not empty
+  expect_gt(ncol(iea_icils$dat), 0)  # expecting more than 0 columns
+})
+
+test_that("2023: teach_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
+  iea_icils <- download_icils_iea(year = "2023", data_type = "teach_dat")
+  # testing if result is a GADSdat
+  expect_s3_class(iea_icils, "GADSdat")
+  # testing whether the data set is not empty
+  expect_gt(ncol(iea_icils$dat), 0)  # expecting more than 0 columns
+})
+
+test_that("2023: school_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
+  iea_icils <- download_icils_iea(year = "2023", data_type = "school_dat")
+  # testing if result is a GADSdat
+  expect_s3_class(iea_icils, "GADSdat")
+  # testing whether the data set is not empty
+  expect_gt(ncol(iea_icils$dat), 0)  # expecting more than 0 columns
+})
+
+test_that("2023: it_dat was successfully downloaded", {
+  skip_if_not(
+    identical(Sys.getenv("EATGETS_RUN_DOWNLOAD_TESTS"), "true"),
+    "Skipping large download test. Set EATGETS_RUN_DOWNLOAD_TESTS=true to run."
+  )
+  iea_icils <- download_icils_iea(year = "2023", data_type = "it_dat")
+  # testing if result is a GADSdat
+  expect_s3_class(iea_icils, "GADSdat")
+  # testing whether the data set is not empty
+  expect_gt(ncol(iea_icils$dat), 0)  # expecting more than 0 columns
+})
+
 # error tests
 test_that("error for invalid combination", {
   expect_error(
